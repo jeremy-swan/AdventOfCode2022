@@ -1,0 +1,6 @@
+bin
+obj
+.ionide/
+.fake
+.vscode
+.DS_Store
