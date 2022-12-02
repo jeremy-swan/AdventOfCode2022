@@ -1,8 +1,14 @@
 module Day1 
 open TypeExtensions
+open System
 
 let TEST_INPUT = "day1_test.txt"
 let REAL_INPUT = "day1_real.txt"
+
+let parseFile : string list -> int option list =
+    List.map (fun x -> match Int32.TryParse(x) with
+                        | true, n -> Some n
+                        | _ -> None)
 
 
 let part1 (input : int option list) =
