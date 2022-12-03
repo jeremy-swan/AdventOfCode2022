@@ -14,3 +14,11 @@ module List =
             ([], [], 0)
         |> fun (x, _, _) -> x
         |> List.rev
+
+    let toTupleOf2 = function
+        | [x1; x2] -> (x1, x2)
+        | _ -> failwith "input list can only have two items"
+
+    let intersect l1 l2 =
+        Set.intersect (Set.ofList l1) (Set.ofList l2)
+        |> Set.toList

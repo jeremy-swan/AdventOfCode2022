@@ -1,7 +1,7 @@
 ﻿open System
 open System.IO
 
-open Day2
+open Day3
 
 let readFile = sprintf "input/%s" >> File.ReadAllText
 let prepareFile (fileContent : string) = 

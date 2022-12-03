@@ -43,7 +43,8 @@ let parseFile : string list -> Input list =
     List.map (fun x -> 
         x.Split(' ')
         |> Array.take 2
-        |> fun [| x1; x2 |] -> (x1, x2))
+        |> List.ofArray
+        |> List.toTupleOf2)
 
 let part1 (input : Input list) =
     input
