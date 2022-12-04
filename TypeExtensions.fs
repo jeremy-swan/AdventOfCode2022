@@ -22,3 +22,8 @@ module List =
     let intersect l1 l2 =
         Set.intersect (Set.ofList l1) (Set.ofList l2)
         |> Set.toList
+
+module Array =
+    let toTupleOf2 = function
+        | [|x1; x2|] -> (x1, x2)
+        | _ -> failwith "input list can only have two items"
