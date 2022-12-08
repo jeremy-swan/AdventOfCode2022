@@ -48,6 +48,9 @@ module List =
 
     let removeLast list = list |> List.removeAt (List.length list - 1)
 
+    let asTransposed f = 
+        List.transpose >> f >> List.transpose
+
 module Array =
     let toTupleOf2 = function
         | [|x1; x2|] -> (x1, x2)
